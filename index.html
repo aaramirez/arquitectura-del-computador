@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KX76XF8R');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arquitectura del computador</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="De la compuerta lógica al procesador, la memoria y el conjunto de instrucciones, hasta donde empieza el sistema operativo, con un computador que se arma en la página desde la compuerta NAND.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX76XF8R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wrap" data-page="index">
+<header class="topbar"><a class="brand" href="index.html">Arquitectura del <b>computador</b></a><span class="eyebrow">Curso visual e interactivo · Computación</span><a class="al-sitio" href="https://aaramirez.github.io/">← Todos los cursos</a></header>
+<div class="layout">
+<nav class="toc" id="toc" aria-label="Ruta de aprendizaje"></nav>
+<main>
+
+<header class="hero">
+  <span class="eyebrow">Curso visual e interactivo · Computación</span>
+  <h1>Un computador que se arma frente a ti, desde una sola compuerta</h1>
+  <p class="lede">Todo lo que hace un computador, de una hoja de cálculo a un modelo de IA, termina en millones de interruptores que se prenden y se apagan. Este curso sube desde ese interruptor hasta un procesador que ejecuta programas reales: compuertas, sumadores, registros, instrucciones, el *pipeline* y la caché. En cada capítulo hay un circuito o un procesador simulado que puedes tocar.</p>
+</header>
+
+<section>
+  <h2>Cómo usar este curso</h2>
+  <div class="prose">
+    <p><b>Estado.</b> El curso está en preparación. La <a href="temario.html">tabla de contenido</a> ya tiene los 14 capítulos con sus secciones y sus laboratorios, y está en revisión.</p>
+    <p><b>Para quién es.</b> Para cualquier profesional curioso que quiera saber qué hay dentro de la máquina con la que trabaja, y para estudiantes de computación que necesitan la base del procesador para Sistemas operativos y Compiladores. Los primeros capítulos no piden nada más que sumar; los últimos llegan a la profundidad de un curso universitario. Ayuda haber escrito algún programa (Programación en Python basta); el álgebra de Boole como estructura está en Matemáticas discretas.</p>
+    <p><b>Cómo está hecho.</b> Un mismo computador de juguete se arma a lo largo del curso: empieza con una compuerta NAND, gana un sumador, una ALU, registros y memoria, y termina como un procesador que ejecuta un subconjunto real de RISC-V (RV32I), primero en un ciclo, después segmentado y con caché. Un programa pequeño, sumar una lista de números, lo recorre todo y se mira bajar del código al ensamblador y a las señales del circuito. Cada concepto empieza con una analogía y luego se nombra con su sigla. Las prácticas, de solo lectura, miran el procesador de tu propio equipo en Linux, macOS y Windows, con una pestaña por sistema.</p>
+  </div>
+</section>
+
+<details class="stage" id="temario" open><summary><h2><span class="pn">Empieza aquí</span> Tabla de contenido</h2></summary>
+  <div class="mods">
+    <a class="mod" href="temario.html"><span class="n">≡</span><b>Tabla de contenido</b><p>Cada capítulo con sus secciones y sus laboratorios.</p></a>
+  </div>
+</details>
+
+<details class="stage" id="parte-1" open><summary><h2><span class="pn">Parte 1</span> Del bit a la compuerta</h2><span class="cuenta" data-etapa-cuenta="1"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="que-hay-dentro"><span class="n">01</span><b>Qué hay dentro de un computador</b><p>Procesador, memoria, almacenamiento y buses, la máquina de von Neumann y las capas que separan una app del transistor.</p></div>
+    <div class="mod soon" data-id="representar-informacion"><span class="n">02</span><b>Representar información con bits</b><p>Binario y hexadecimal, enteros con y sin signo, complemento a dos, punto flotante IEEE 754 y texto en UTF-8.</p></div>
+    <div class="mod soon" data-id="compuertas-logicas"><span class="n">03</span><b>Compuertas lógicas y álgebra de Boole</b><p>Del transistor como interruptor a las compuertas, la NAND universal y la simplificación de circuitos.</p></div>
+    <div class="mod soon" data-id="circuitos-combinacionales"><span class="n">04</span><b>Circuitos combinacionales: sumar y elegir</b><p>Multiplexores, decodificadores, sumadores y la ALU que hace las cuentas del procesador.</p></div>
+    <div class="mod soon" data-id="circuitos-secuenciales"><span class="n">05</span><b>Circuitos secuenciales: el reloj y la memoria</b><p>Cerrojos, flip-flops, registros, contadores, máquinas de estados y las celdas de SRAM y DRAM.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-2" open><summary><h2><span class="pn">Parte 2</span> El procesador</h2><span class="cuenta" data-etapa-cuenta="2"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="conjunto-de-instrucciones"><span class="n">06</span><b>El conjunto de instrucciones</b><p>El idioma del procesador: registros, formatos, modos de direccionamiento y el ensamblador de RISC-V.</p></div>
+    <div class="mod soon" data-id="funciones-y-pila"><span class="n">07</span><b>Funciones, la pila y el montículo</b><p>Cómo se llama a una función en lenguaje de máquina: convención de llamada, marco de pila y el mapa de memoria de un programa.</p></div>
+    <div class="mod soon" data-id="ruta-de-datos"><span class="n">08</span><b>La ruta de datos y la unidad de control</b><p>Buscar, decodificar y ejecutar: el procesador del curso ejecuta una instrucción por ciclo.</p></div>
+    <div class="mod soon" data-id="segmentacion"><span class="n">09</span><b>Segmentación: el *pipeline*</b><p>Una línea de montaje de instrucciones, sus riesgos y las técnicas que los resuelven.</p></div>
+    <div class="mod soon" data-id="paralelismo-de-instrucciones"><span class="n">10</span><b>Paralelismo a nivel de instrucción</b><p>Superescalares, ejecución fuera de orden, el algoritmo de Tomasulo, renombrado de registros y especulación.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-3" open><summary><h2><span class="pn">Parte 3</span> La memoria</h2><span class="cuenta" data-etapa-cuenta="3"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="jerarquia-de-memoria"><span class="n">11</span><b>La jerarquía de memoria</b><p>Registros, cachés, RAM, SSD y disco: localidad, latencias y por qué la memoria es el cuello de botella.</p></div>
+    <div class="mod soon" data-id="la-cache"><span class="n">12</span><b>La caché por dentro</b><p>Líneas, etiquetas, correspondencia directa y asociativa, reemplazo, escritura y el tiempo medio de acceso.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-4" open><summary><h2><span class="pn">Parte 4</span> La frontera y el chip de hoy</h2><span class="cuenta" data-etapa-cuenta="4"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="interrupciones-y-privilegios"><span class="n">13</span><b>Entrada y salida, interrupciones y privilegios</b><p>Lo que el hardware pone para que exista un sistema operativo: E/S mapeada en memoria, interrupciones, DMA, modos de privilegio, la MMU y el arranque.</p></div>
+    <div class="mod soon" data-id="multinucleo-y-energia"><span class="n">14</span><b>Muchos núcleos, aceleradores y energía</b><p>El fin de la escala de Dennard, los multinúcleos, los SoC, las GPU y el presupuesto de energía que manda en el diseño actual.</p></div>
+  </div>
+</details>
+
+
+
+<nav class="pager" id="pager" aria-label="Capítulo anterior y siguiente"></nav>
+</main>
+</div>
+<footer><span>Curso abierto de aaramirez.github.io.</span><span>Sitio publicado: <a href="https://github.com/aaramirez/arquitectura-del-computador" target="_blank" rel="noopener">github.com/aaramirez/arquitectura-del-computador</a></span></footer>
+</div>
+<script src="assets/lab.js"></script>
+</body>
+</html>
